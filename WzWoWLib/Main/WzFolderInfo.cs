@@ -13,9 +13,10 @@ namespace WzWoWLib.Main
         public string Name { get; protected set; }
         public string FullName { get; protected set; }
 
-        public WzFolderInfo(string path)
+        public WzFolderInfo(string path, bool mustExist = true)
         {
-            if (!WzFolderInfo.FolderExists(path)) throw new DirectoryNotFoundException($"'{path}' does not exist");
+            if (!WzFolderInfo.FolderExists(path) && mustExist) throw new DirectoryNotFoundException($"'{path}' does not exist");
+
             var info = new DirectoryInfo(path);
 
             this.FullName = info.FullName;
@@ -39,6 +40,23 @@ namespace WzWoWLib.Main
 
             var newPath = Path.Combine(newPaths);
             return new WzFolderInfo(newPath);
+        }
+
+
+        public List<IWzFolderInfo> GetFolders()
+        {
+            var result = new List<IWzFolderInfo>();
+
+            var dir = new DirectoryInfo(this.FullName);
+
+            var folders = dir.GetDirectories();
+
+            foreach(var folder in folders)
+            {
+                result.Add(new WzFolderInfo(folder.FullName));
+            }
+
+            return result;
         }
         
         public IWzFileInfo GetFile(string fileName, bool recurse = false)

@@ -7,11 +7,10 @@ using WzWoWLib;
 namespace Tests.WzWowLib
 {
     [TestClass]
-    public class WzWoWLibTests
+    public class WzWoWLibTests : TestBase
     {
-        private string _testPath = @"D:\Dev\Games\WoW\ModTosser\WzAddonTosser\TestPaths\";
-
         [TestMethod]
+        [TestCategory("Library Initialization")]
         public void WzWoWLib_BadParams()
         {
             Assert.ThrowsException<ArgumentException>(() =>
@@ -31,24 +30,24 @@ namespace Tests.WzWowLib
 
             Assert.ThrowsException<DirectoryNotFoundException>(() =>
             {
-                var main = new WzWoWLibMain(_testPath + "Does_Not_Exist");
+                var main = new WzWoWLibMain(_testPath.PathDoesNotExist);
             }, "Failed with invalid directory");
 
 
             Assert.ThrowsException<DirectoryNotFoundException>(() =>
             {
-                var main = new WzWoWLibMain(_testPath + "WoWNoData");
+                var main = new WzWoWLibMain(_testPath.EmptyFolder);
             }, "Failed with no Addons directory");
 
 
             Assert.ThrowsException<FileNotFoundException>(() =>
             {
-                var main = new WzWoWLibMain(_testPath + "WoWPathsNoEXE");
+                var main = new WzWoWLibMain(_testPath.ValidPathsNoEXE);
             }, "Failed with valid directory no EXE");
 
             Assert.ThrowsException<FileNotFoundException>(() =>
             {
-                var main = new WzWoWLibMain(_testPath + "WoWPathsNoEXE");
+                var main = new WzWoWLibMain(_testPath.ValidPathsNoEXE);
             }, "Failed with valid directory no EXE trailing slash");
 
 
@@ -57,9 +56,10 @@ namespace Tests.WzWowLib
 
 
         [TestMethod]
+        [TestCategory("Library Initialization")]
         public void WzWoWLib_validFolder()
         {
-            var main = new WzWoWLibMain(_testPath + "WoWPathsValid");
+            var main = new WzWoWLibMain(_testPath.ValidPath);
             Assert.IsNotNull(main, "Object was unexpectedly null");
 
             Assert.IsNotNull(main.WoWFolder, "WoWFolder should not be null");

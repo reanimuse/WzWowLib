@@ -45,6 +45,25 @@ namespace WzWoWLib.Main
             return result;
         }
 
+        public string[] ReadLines()
+        {
+            var result = new List<string>();
+
+            if (File.Exists(this.FullName))
+            {
+                var allText = File.ReadAllText(this.FullName);
+
+                if (!string.IsNullOrWhiteSpace(allText))
+                {
+                    var lines = allText.Replace("\r\n", "\n").Split('\n');
+
+                    foreach (var line in lines) result.Add(line);
+                }
+            }
+
+            return result.ToArray();
+        }
+
         public static bool FileExists(string path)
         {
             if (string.IsNullOrWhiteSpace(path)) return false;

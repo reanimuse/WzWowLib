@@ -1,0 +1,101 @@
+
+dbOHC = {
+	["char"] = {
+		["Reaminated - Area 52"] = {
+			["firstun"] = false,
+		},
+		["Dethtongue - Hydraxis"] = {
+			["firstun"] = false,
+		},
+		["Syren - Hydraxis"] = {
+			["firstun"] = false,
+		},
+		["Pocowhontas - Ursin"] = {
+			["firstun"] = false,
+		},
+		["Meteshield - Area 52"] = {
+			["firstun"] = false,
+		},
+		["Stickershock - Area 52"] = {
+			["firstun"] = false,
+		},
+		["Pocowhontas - Area 52"] = {
+			["firstun"] = false,
+		},
+		["Keylandrin - Area 52"] = {
+			["firstun"] = false,
+		},
+	},
+	["global"] = {
+		["warn01_seen"] = 0,
+		["firstrun"] = false,
+		["news"] = {
+			[10508] = true,
+			[10513] = true,
+			[10514] = true,
+		},
+		["warn02_seen"] = 0,
+	},
+	["profileKeys"] = {
+		["Reaminated - Area 52"] = "Default",
+		["Dethtongue - Hydraxis"] = "Default",
+		["Syren - Hydraxis"] = "Default",
+		["Pocowhontas - Ursin"] = "Default",
+		["Meteshield - Area 52"] = "Default",
+		["Stickershock - Area 52"] = "Default",
+		["Pocowhontas - Area 52"] = "Default",
+		["Keylandrin - Area 52"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["toggles"] = {
+				["ELITEOVERCAP"] = true,
+				["SPARE"] = false,
+				["SORTMISSION"] = "Garrison_SortMissions_Original",
+				["NEVERKILLTROOPS"] = false,
+				["MAKEITVERYQUICK"] = false,
+				["NOBLACKLIST"] = false,
+				["MOVEPANEL"] = true,
+				["MAXIMIZEXP"] = true,
+				["USEALLY"] = false,
+				["SAVETROOPS"] = false,
+				["IGNOREINACTIVE"] = true,
+				["NOTROOPS"] = false,
+				["BONUS"] = true,
+				["SORTMISSION2"] = "Garrison_SortMissions_Original",
+				["BONUSCHANCE"] = 100,
+				["IGNORELOW"] = false,
+				["NOWARN"] = false,
+				["PREFERHIGH"] = false,
+				["BAN160"] = false,
+				["MAKEITQUICK"] = false,
+				["MAXCHAMP"] = 2,
+				["TROOPALERT"] = true,
+				["IGNOREBUSY"] = true,
+				["BASECHANCE"] = 0,
+			},
+			["showmenu"] = false,
+			["blacklist"] = {
+				[1727] = true,
+				[1635] = false,
+				[1765] = true,
+				[1766] = false,
+				[1767] = true,
+				[1056] = true,
+				[1554] = true,
+				[1773] = false,
+				[1774] = true,
+				[1775] = true,
+				[1653] = false,
+				[1778] = false,
+				[1780] = false,
+				[1815] = true,
+				[1816] = true,
+				[1507] = true,
+				[1052] = false,
+				[1757] = true,
+				[1777] = true,
+			},
+		},
+	},
+}

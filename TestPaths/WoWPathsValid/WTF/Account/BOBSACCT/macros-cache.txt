@@ -1,0 +1,128 @@
+VER 3 0000000000000032 "Acheo" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [mod] Archaeology; Survey
+END
+VER 3 000000000000003C "aTurkey" "1516561"
+/cleartarget
+/target [nodead] Wild Turkey
+/cast [nodead] Lightning Bolt
+END
+VER 3 0000000000000025 "AucConfirm" "INV_SummerFest_Symbol_Low"
+/click AuctioneerPostPromptYes 
+END
+VER 3 000000000000002E "Chess" "ACHIEVEMENT_GUILDPERK_QUICK AND DEAD"
+/cancelaura [mod] Control Piece
+/run SelectGossipOption(1);
+END
+VER 3 000000000000002A "CollectMeRM" "ABILITY_MOUNT_BIGBLIZZARDBEAR"
+/cm rm
+END
+VER 3 0000000000000035 "dev_reload" "INV_MISC_NOTE_05"
+/console reloadui
+END
+VER 3 0000000000000033 "enchant" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [mod] Enchanting; Disenchant
+END
+VER 3 0000000000000036 "FishSpec" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/equipset [nocombat,mod] Fishing Buddy; PvE
+END
+VER 3 0000000000000018 "frm" "INV_Misc_QuestionMark"
+#showtooltip
+/castsequence [mod] Find Minerals, Find Herbs
+/stopmacro [mod]
+/click [stance:0,nomounted][stance:1][stance:3] LivestockComboButton
+/stopmacro [stance:0,nomounted][stance:1][stance:3]
+/castsequence Find Minerals, Find Herbs
+END
+VER 3 000000000000003B "Glide" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/castsequence [nomod] reset=180 Goblin Glider Kit, Rocfeather Skyhorn Kite
+/cast [mod] Rocfeather Skyhorn Kite
+END
+VER 3 000000000000002C "Heal Pet" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/castsequence [nomod] reset=480 Revive Battle Pets, Battle Pet Bandage
+/use [mod] Battle Pet Bandage
+END
+VER 3 0000000000000031 "Hearth" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/equip [mod:alt] Cloak of Coordination
+/cast [mod:shift] Garrison Hearthstone; [mod:ctrl] Admiral's Compass; [mod:alt] Cloak of Coordination; Hearthstone
+END
+VER 3 0000000000000034 "HMount" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/dismount [mounted]
+/cast [mod:alt] Grand Expedition Yak; [mod:ctrl][swimming] Azure Water Strider;  [flyable,mod,noswimming] X-53 Touring Rocket; [mod:shift] Core Hound;  [flyable,nomod] Sandstone Drak; Warlord's Deathwheel
+END
+VER 3 000000000000003D "Holiday" "135833"
+/run for k,v in pairs({BallOfTangledLights=39615;ImportedTrees=39616;LittleHelpers=39767;FestiveOutfits=39671;OldBoxOfDecorations=39712})do print(format("%s: %s",k,IsQuestFlaggedCompleted(v) and "\124cff00ff00Yes\124r" or "\124cffff0000No\124r"))end
+END
+VER 3 000000000000003A "Holiday" "INV_MISC_QUESTIONMARK"
+/way Howling Fjord 25.4 59.8
+/way Howling Fjord 49.4 10.7
+/way Howling Fjord 52.1 66.1
+/way Howling Fjord 79.2 30.6
+END
+VER 3 000000000000003F "Meatball Progres" "236547"
+/run local a={45111,45162,45163,45304,45312}for i,q in ipairs(a)do print(format("Step %s: %s",i, IsQuestFlaggedCompleted(q) and "\124cFF00FF00Done\124r" or "\124cFFFF0000Not Done\124r")) end
+END
+VER 3 000000000000002B "mountally" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/dismount [mounted]
+/cast [mod:alt] Grand Expedition Yak; [mod:ctrl][swimming] Azure Water Strider;  [flyable,mod,noswimming] X-53 Touring Rocket; [mod:shift] Core Hound;  [flyable,nomod] Sandstone Drak; Hearthsteed
+END
+VER 3 000000000000001E "NoTip" "spell_Warlock_Focusshadow"
+/script GameTooltip.Temphide = function() GameTooltip:Hide() end; GameTooltip:SetScript("OnShow", GameTooltip.Temphide);
+END
+VER 3 000000000000001F "NoTipOn" "spell_Warlock_Soulburn"
+/script GameTooltip:SetScript("OnShow", GameTooltip.Show);
+END
+VER 3 0000000000000028 "profs" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [nomod] Fishing
+/cast [mod:ctrl, mod:shift] Cooking Fire
+/stopmacro [mod:ctrl, mod:shift]
+/cast [mod:shift] Cooking
+/cast [mod:alt] First Aid
+/cast [mod:ctrl] Steamworks Sausage Grill
+END
+VER 3 000000000000001B "Ready" "Spell_Shadow_Shadowfiend"
+/readycheck
+END
+VER 3 000000000000003E "Sellgray" "1505947"
+/mtsg
+END
+VER 3 0000000000000039 "sit" "INV_MISC_QUESTIONMARK"
+/sit
+END
+VER 3 0000000000000038 "tar" "INV_MISC_QUESTIONMARK"
+/target [nodead] corrupted tentacle
+/target [nodead] deathglare tentacle
+/target [nodead] dominator tentacle
+/target [nodead] Nightmare Horror
+END
+VER 3 0000000000000030 "TSMMacro" "Achievement_Faction_GoldenLotus"
+/click TSMVendoringSellAllButton
+/click TSMShoppingCancelConfirmationButton
+/click TSMAuctioningCancelButton
+/click TSMCraftNextButton
+/click TSMAuctioningPostButton
+/click TSMDestroyButton
+END
+VER 3 0000000000000026 "umount" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/dismount [mounted]
+/use [mod:alt]Grand Expedition Yak
+/use [mod:ctrl][swimming]Azure Water Strider
+/use [flyable,mod,noswimming]X-53 Touring Rocket
+/use [flyable,nomod]Sandstone Drake
+/use Mechano-Hog
+END
+VER 3 0000000000000037 "zzBrewRam" "INV_STAFF_10"
+/cancelaura [mod] Rental Racing Ram
+/cancelaura [mod] Ramstein's Swift Work Ram
+/stopmacor [mod]
+/click ExtraActionButton1
+END

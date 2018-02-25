@@ -18,11 +18,13 @@ namespace WzWoWLib.interfaces
     {
         IWzFolderInfo GetSubfolder(params string[] paths);
         IWzFileInfo GetFile(string fileName, bool recurse = false);
+        List<IWzFolderInfo> GetFolders();
     }
 
     public interface IWzFileInfo : IWzIOInfoBase
     {
         IWzVersionInfo GetVersion();
+        string[] ReadLines();
     }
 
 

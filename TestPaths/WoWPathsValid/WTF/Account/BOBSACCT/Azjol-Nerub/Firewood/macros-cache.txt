@@ -1,0 +1,9 @@
+VER 3 0100000000000001 "Bandage" "Spell_Holy_SealOfSacrifice"
+/script SpellStopCasting() UseContainerItem(4,4) SpellTargetUnit("Player") 
+END
+VER 3 0100000000000003 "chat" "Ability_Druid_LunarGuidance"
+Want to join a banker-only guild?   No leveling, no raiding, nothing but peace and quiet without getting guild charters stuffed in your face.
+END
+VER 3 0100000000000002 "Guild Spam" "Ability_Ambush"
+/2 <Kalimdor Investment Corp> is now recruiting banker toons.  There will be no leveling, raids or probably even guild chat.  Put an end to Ninja Guild invites and getting charters stuffed in your face!  PST for invite
+END

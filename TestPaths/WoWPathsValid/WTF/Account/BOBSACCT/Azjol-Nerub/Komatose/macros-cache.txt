@@ -1,0 +1,32 @@
+VER 3 0100000000000007 "Clean" "INV_Misc_QuestionMark"
+#showtooltip Dispel Magic
+/cast [target=mouseover,exists][] Dispel Magic
+END
+VER 3 010000000000000A "dis" "INV_Misc_QuestionMark"
+#showtooltip
+/cast [target=mouseover,exists][] Abolish Disease
+END
+VER 3 0100000000000003 "Flash" "INV_Misc_QuestionMark"
+#showtooltip Flash Heal
+/cast [target=mouseover,exists][] Flash Heal
+END
+VER 3 0100000000000008 "fort" "INV_Misc_QuestionMark"
+#showtooltip
+/cast [target=mouseover,exists][] Power Word: Fortitude
+END
+VER 3 0100000000000006 "Heal" "INV_Misc_QuestionMark"
+#showtooltip Heal
+/cast [target=mouseover,exists][] Heal
+END
+VER 3 0100000000000005 "Lesser" "INV_Misc_QuestionMark"
+#showtooltip Lesser Heal
+/cast [target=mouseover,exists][] Lesser Heal
+END
+VER 3 0100000000000004 "Renew" "INV_Misc_QuestionMark"
+#showtooltip Renew
+/cast [target=mouseover,exists][] Renew
+END
+VER 3 0100000000000009 "shi" "INV_Misc_QuestionMark"
+#showtooltip
+/cast [target=mouseover,exists][] Power Word: Shield
+END

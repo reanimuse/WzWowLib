@@ -7,6 +7,7 @@ using System.IO;
 
 using WzWoWLib.Main;
 using WzWoWLib.interfaces;
+using WzWoWLib.Accounts;
 
 namespace WzWoWLib
 {
@@ -17,6 +18,7 @@ namespace WzWoWLib
         public IWzFolderInfo WTFFolder { get; }
 
         public IWzVersionInfo InstalledWoWVersion { get;  }
+
 
         public WzWoWLibMain(string pathToWowDir)
         {
@@ -33,6 +35,13 @@ namespace WzWoWLib
             // at this point we probably have a valid wow install location
 
             this.InstalledWoWVersion = wowExePath.GetVersion();
+        }
+
+        public WzAccountCollection GetAccounts()
+        {
+            var acctFolder = WTFFolder.GetSubfolder("Account");
+
+            return new WzAccountCollection(acctFolder);
         }
     }
 }

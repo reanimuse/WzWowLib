@@ -1,0 +1,19 @@
+VER 3 0100000000000001 "Attack" "INV_Misc_QuestionMark"
+#showtooltip
+/cast [nocombat, stance:1] Charge; [stance:3] Intercept
+/startAttack
+/cast Bloodrage
+END
+VER 3 0100000000000004 "Deve" "INV_MISC_QUESTIONMARK"
+#showtooltip Devastate
+/cast Devastate
+/cast Shield Slam
+END
+VER 3 0100000000000003 "stomp" "INV_Misc_QuestionMark"
+#showtooltip
+/stopcasting
+/castsequence reset=129 War Stomp, Netherweave Bandage
+END
+VER 3 0100000000000002 "tst" "INV_Misc_QuestionMark"
+#showtooltip item:15290
+END

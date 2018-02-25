@@ -1,0 +1,4 @@
+VER 3 0100000000000001 "Seals" "INV_Misc_QuestionMark"
+#showtooltip
+/castsequence reset=30 Seal of the Crusader, Judgement, Seal of Righteousness, judgement
+END
