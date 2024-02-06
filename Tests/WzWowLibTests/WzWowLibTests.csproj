@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DummyWoWExe\DummWoWExeCore.csproj" />
-    <ProjectReference Include="..\WzWoWLib\WzWoWLib.csproj" />
+    <ProjectReference Include="..\..\WzWoWLib\WzWoWLib.csproj" />
+    <ProjectReference Include="..\DummyWoWExe\DummyWoWExe.csproj" />
   </ItemGroup>
 
 </Project>

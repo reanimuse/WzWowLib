@@ -1,4 +1,4 @@
-!WoW.exe
+*.exe
 .vs
 obj
 bin

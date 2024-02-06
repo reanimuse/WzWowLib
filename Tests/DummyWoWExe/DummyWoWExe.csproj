@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,4 +8,7 @@
     <Version>7.3.5.25996</Version>
   </PropertyGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="call postbuild.bat &quot;$(ProjectDir)&quot; &quot;$(OutDir)&quot; &quot;$(AssemblyName)&quot;" />
+  </Target>
 </Project>
