@@ -1,14 +1,11 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WzWoWLib.Accounts;
+﻿using WzWoWLib.Accounts;
+using Xunit;
 
 namespace Tests.WzWowLib.Account
 {
-    [TestClass]
     public class WzMacroTests
     {
-        [TestMethod]
-        [TestCategory("Macro")]
+        [Fact]
         public void macroTest_FixedStrings()
         {
             var lines = new string[] {
@@ -21,15 +18,15 @@ namespace Tests.WzWowLib.Account
 
             var macro = WzMacro.Parse(lines, 0);
 
-            Assert.IsNotNull(macro, "macro should not be null");
+            Assert.NotNull(macro);
 
-            Assert.IsTrue(!string.IsNullOrWhiteSpace(macro.Name), "Macro name is missing");
-            Assert.IsTrue(macro.Name == "Horde Mount", "Macro name is incorrect");
+            Assert.True(!string.IsNullOrWhiteSpace(macro.Name), "Macro name is missing");
+            Assert.True(macro.Name == "Horde Mount", "Macro name is incorrect");
 
-            Assert.IsTrue(!string.IsNullOrWhiteSpace(macro.IconName), "Macro icon name is missing");
-            Assert.IsTrue(macro.IconName == "INV_MISC_QUESTIONMARK", "Macro icon name is incorrect");
+            Assert.True(!string.IsNullOrWhiteSpace(macro.IconName), "Macro icon name is missing");
+            Assert.True(macro.IconName == "INV_MISC_QUESTIONMARK", "Macro icon name is incorrect");
 
-            Assert.IsTrue(macro.Lines.Length == 3, "incorrect number of macro lines");
+            Assert.True(macro.Lines.Length == 3, "incorrect number of macro lines");
         }
     }
 }

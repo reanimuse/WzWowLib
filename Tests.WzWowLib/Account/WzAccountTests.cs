@@ -1,28 +1,24 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WzWoWLib;
+﻿using WzWoWLib;
 using WzWoWLib.Accounts;
-using System.Linq;
+using Xunit;
 
 namespace Tests.WzWowLib.Account
 {
-    [TestClass]
     public class WzAccountTests : TestBase
     {
-        [TestMethod]
-        [TestCategory("Accounts")]
+        [Fact]
         public void WzAccount_KnownAccount()
         {
             var main = new WzWoWLibMain(_testPath.ValidPath);
-            Assert.IsNotNull(main, "library object was unexpectedly null");
+            Assert.NotNull(main);
 
             var accounts = main.GetAccounts();
-            Assert.IsNotNull(accounts, "accounts should not be null");
+            Assert.NotNull(accounts);
 
-            Assert.IsTrue(accounts.Count > 0, "Accounts should always contain at least one account");
+            Assert.True(accounts.Count > 0, "Accounts should always contain at least one account");
 
             WzAccount known = accounts.FirstOrDefault(x => x.Name == "BOBSACCT");
-            Assert.IsNotNull(known, "known account 'BOBSACCT' was not found");
+            Assert.NotNull(known);
         }
     }
 }
